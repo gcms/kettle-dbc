@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>br.gov.go.saude</groupId>
+  <artifactId>kettle-dbc</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+
+  <name>PDI DBC Compression Plugin</name>
+  <description>This plugin is for pentaho Data integration (ETL) a.k.a kettle</description>
+
+  <modules>
+    <module>core</module>
+    <module>assemblies</module>
+  </modules>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+  <properties>
+    <pdi.version>9.0.0.0-423</pdi.version>
+  </properties>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/filters</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>pentaho-kettle</groupId>
+        <artifactId>kettle-engine</artifactId>
+        <version>${pdi.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>pentaho-kettle</groupId>
+        <artifactId>kettle-core</artifactId>
+        <version>${pdi.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>pentaho</groupId>
+        <artifactId>metastore</artifactId>
+        <version>${pdi.version}</version>
+        <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <artifactId>*</artifactId>
+            <groupId>*</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>br.gov.go.saude</groupId>
+        <artifactId>dbc-reader</artifactId>
+        <version>0.1.0</version>
+        <scope>compile</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

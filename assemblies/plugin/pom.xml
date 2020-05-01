@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.gov.go.saude</groupId>
+        <artifactId>dbc-assemblies</artifactId>
+        <version>0.1.0</version>
+    </parent>
+
+    <artifactId>kettle-dbc-plugin</artifactId>
+    <version>0.1.0</version>
+    <packaging>pom</packaging>
+
+    <name>PDI DBC Compression Plugin Distribution</name>
+    <description></description>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.gov.go.saude</groupId>
+            <artifactId>kettle-dbc-plugin-core</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-archive</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/assembly/assembly.xml</descriptor>
+                            </descriptors>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
