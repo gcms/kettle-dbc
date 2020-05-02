@@ -25,7 +25,7 @@
     </license>
   </licenses>
   <properties>
-    <pdi.version>9.0.0.0-423</pdi.version>
+    <pdi.version>8.2.0.0-342</pdi.version>
   </properties>
   <build>
     <resources>
