@@ -1,6 +1,6 @@
 package br.gov.go.saude.kettle;
 
-import br.gov.go.saude.dbc.DBCInputStream;
+import com.github.gcms.dbc.DBCInputStream;
 import org.pentaho.di.core.compress.CompressionInputStream;
 import org.pentaho.di.core.compress.CompressionProvider;
 

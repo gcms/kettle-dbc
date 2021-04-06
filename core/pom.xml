@@ -6,11 +6,11 @@
   <parent>
     <groupId>br.gov.go.saude</groupId>
     <artifactId>kettle-dbc</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
   </parent>
 
   <artifactId>kettle-dbc-plugin-core</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <packaging>jar</packaging>
 
   <name>PDI DBC Compression Plugin Core</name>
@@ -27,9 +27,9 @@
     </dependency>
 
     <dependency>
-      <groupId>br.gov.go.saude</groupId>
+      <groupId>com.github.gcms</groupId>
       <artifactId>dbc-reader</artifactId>
-      <version>0.1.1</version>
+      <version>0.2.0</version>
     </dependency>
 
     <dependency>
