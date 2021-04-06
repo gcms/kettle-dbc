@@ -31,7 +31,7 @@
     <dependencySet>
       <outputDirectory>lib</outputDirectory>
       <includes>
-        <include>br.gov.go.saude:dbc-reader:jar</include>
+        <include>com.github.gcms:dbc-reader:jar</include>
       </includes>
     </dependencySet>
   </dependencySets>
